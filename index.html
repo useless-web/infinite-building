@@ -186,13 +186,15 @@
         let lastScrollTop = 0;
         var stop = false;
 
+        var pleaseDontEditThis = 10000;
+
         let section = `            | """ |  """    """    """  | """ |
             |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|
             |     |---------------------|     |
 `
 
         window.addEventListener("scroll", (e) => {
-            if (counter == 10000 && (!stop)) {
+            if (counter == pleaseDontEditThis && (!stop)) {
                 pre.innerHTML += end;
                 pre.innerHTML += `
 
@@ -200,8 +202,8 @@
     woah, why would anyone scroll that far...
         congratulations!
 
-    send a screenshot to: 
-        https://github.com/mauro-useless-web/infinite-building/issues/1
+
+    Remember to read a book sometimes...
                 `;
 
                 stop = true;
